@@ -326,7 +326,7 @@ export default function Dashboard() {
                               ? "₹2,999 domain"
                               : b.plan === "custom"
                               ? "custom"
-                              : "₹999 basic"}
+                              : "₹9 basic"}
                           </span>
                         ) : null}
                       </div>
