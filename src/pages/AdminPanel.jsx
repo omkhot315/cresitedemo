@@ -342,7 +342,7 @@ function CreatorCard({ creator, rank, totalSites, isYou, onOpenSites }) {
                           : "bg-black/5 text-[#55555E]"
                       }`}
                     >
-                      {b.plan === "domain" ? "₹2,999" : b.plan === "custom" ? "custom" : "₹999"}
+                      {b.plan === "domain" ? "₹2,999" : b.plan === "custom" ? "custom" : "₹9"}
                     </span>
                   ) : null}
                   <span className="shrink-0 text-[11px] font-semibold text-[#A1A1AA]">{fmtShort(b.createdAt)}</span>
