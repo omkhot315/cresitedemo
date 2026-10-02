@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+/* ---------- Platform base ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  background-color: #f6f5f1;
+  color: #101014;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.font-display {
+  font-family: "Space Grotesk", "Inter", sans-serif;
+}
+
+.font-accent-serif {
+  font-family: "Fraunces", Georgia, serif;
+}
+
+::selection {
+  background: #5046e5;
+  color: #ffffff;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(16, 16, 20, 0.25) transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(16, 16, 20, 0.22);
+  border-radius: 99px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ---------- Decorative helpers ---------- */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(16, 16, 20, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 16, 20, 0.05) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.bg-grid-light {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ---------- Keyframes ---------- */
+@keyframes sf-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: sf-marquee 90s linear infinite;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes sf-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+.animate-float {
+  animation: sf-float 6s ease-in-out infinite;
+}
+
+@keyframes sf-blob {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(28px, -22px) scale(1.06);
+  }
+  66% {
+    transform: translate(-18px, 14px) scale(0.96);
+  }
+}
+.animate-blob {
+  animation: sf-blob 16s ease-in-out infinite;
+}
+
+@keyframes sf-pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+.animate-pulse-ring {
+  animation: sf-pulse-ring 2.2s infinite;
+}
